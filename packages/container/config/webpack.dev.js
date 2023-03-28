@@ -24,6 +24,7 @@ const devConfig = {
         search: "search@http://localhost:8089/remoteEntry.js",
         pitchboard: 'pitchboard@//localhost:8088/remoteEntry.js',
         expert: 'expert@http://localhost:8083/remoteEntry.js',
+        details: "details@http://localhost:8085/remoteEntry.js",
       },
       shared: packageJson.dependencies,
     }),

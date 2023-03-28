@@ -129,7 +129,7 @@ export default function Album() {
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
+            {cards.map((card, idx) => (
               <Grid item key={card.url} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardContent className={classes.cardContent}>
@@ -147,6 +147,14 @@ export default function Album() {
                     <Link to={card.url}>
                       <Button size="small" color="primary">
                         View
+                      </Button>
+                    </Link>
+                    <Link to={{
+                      pathname: `/details/${idx}`,
+                      state: card,
+                    }}>
+                      <Button size="small" color="primary">
+                        Edit
                       </Button>
                     </Link>
                   </CardActions>
